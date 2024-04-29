@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Home = () => {
-	const [imputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
 
 	return (
@@ -15,8 +15,8 @@ const Home = () => {
 						value={inputValue}
 						onKeyDown={(e) => {
 							if (e.key === "Enter") {
-								setTodos(Todos.concat([imputValue]));
-								setImputValue("");
+								setTodos(todos.concat([inputValue]));
+								setInputValue("");
 							}
 						}}
 						placeholder="what do you need for the event?" />
